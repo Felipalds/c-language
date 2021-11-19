@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 int main(){
-    float R;
-    float pi = 3.14159;
+    double R;
+    double pi = 3.14159;
 
-    scanf("%f", &R);
+    scanf("%lf", &R);
 
-    float A = pi*R*R;
-
-    printf("%f\n", A);
+    double A = pi * R * R;
+    printf("A=%.4f\n", A);
 }

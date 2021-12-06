@@ -29,7 +29,7 @@ int main(){
 
     printf("Novo salario: %.2f\n", new_salary);
     printf("Reajuste ganho: %.2f\n", increased);
-    printf("Em percentual: %.0f\n", percent * 100);
+    printf("Em percentual: %.0f %%\n", percent * 100);
 
     return 0;
 }

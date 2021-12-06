@@ -3,7 +3,7 @@
 
 int main(){
 
-    int a, b, c, isRetangle;
+    int a, b, c;
 
     scanf("%d %d %d", &a, &b, &c);
 
@@ -13,11 +13,11 @@ int main(){
         printf("Valido-");
         if(a == b && b == c)
             printf("Equilatero\n");
-        else if(a != b && b != c)
+        else if(a != b && b != c && c != a)
             printf("Escaleno\n");
         else
             printf("Isoceles\n");
-        printf("Retangulo:");
+        printf("Retangulo: ");
         if(pow(a, 2) == pow(b, 2) + pow(c, 2) || pow(b, 2) == pow(a, 2) + pow(c, 2) || pow(c, 2) == pow(b, 2) + pow(a, 2))
             printf("S\n");
         else

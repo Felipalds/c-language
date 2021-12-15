@@ -16,8 +16,7 @@ int main(){
         }
         for(int c = x + 1; c < y; c ++){
             if(c % 2 == 1)
-                odds += c;
-                
+                odds += c;   
         }
         printf("%d\n", odds);
     }

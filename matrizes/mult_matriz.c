@@ -10,3 +10,35 @@ dimensões da matriz B, seu número de linhas (p) e de colunas (q), respectivame
 As próximas M × N linhas contém os elementos da matriz, organizados por linhas.
 As matrizes tem dimensões máximas de 20 linhas e 20 colunas.
 */
+
+#include <stdio.h>
+
+int main(){
+
+
+    int i, j;
+    scanf("%d %d", i, j);
+    int matriz_a[i][j];
+    for(int c = 0; c < i; c++){
+        for(int g = 0; g < j; g++){
+            scanf("%d", &matriz_a[i][j]);
+        }
+    }
+
+    int x, y;
+    scanf("%d %d", x, y);
+    int matriz_b[x][y];
+    for(int c = 0; c < x; c++){
+        for(int g = 0; g < y; g++){
+            scanf("%d", &matriz_b[x][y]);
+        }
+    }
+
+    if(y != i){
+        printf("Não é possível multiplicar as matrizes");
+    } else {
+        
+    }
+
+    return 0;
+}

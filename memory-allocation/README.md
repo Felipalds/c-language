@@ -1,0 +1,2 @@
+# Exit
+A função ```void exit(int cod)``` serve para fechar seu programa e voltar o controle para o SO. Código 1 para saídas que contém algum erro (algo que não deveria acontecer), e código 0 para uma saída correta (tudo deu certo, apenas feche o programa).

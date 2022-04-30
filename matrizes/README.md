@@ -14,3 +14,8 @@ Todas as três formas funcionam de forma idêntica
 
 ## Matrizes
 ``` int matriz[x][y] ```
+Tamanho de matrizes: 
+``` lines * cols * typeof(type) ```
+Para passar matrizes como argumentos para funções, precisamos informar pelo menos o tamanho das linhas (segundo parâmetro). Isso para que o compilador consiga alocar corretamente.
+- ``` int function( matriz[][10] ) {} ``` pela matriz dimensionada
+

@@ -1,0 +1,75 @@
+Exercícios
+==========
+
+1) Crie um programa C que:
+
+(a) crie/abra um arquivo texto de nome "arq.txt",
+(b) permita que o usuario entre com diversos caracteres nesse arquivo, 
+    até que o usuario entre com o caractere ’0’(fim da entrada de dados),
+(c) feche o arquivo e abra novamente o arq.txt, e
+(d) lendo-o caractere por caractere, e escrevendo na tela (printf) 
+    todos os caracteres armazenados.
+    
+========================================================================
+
+2) Faça um programa em C que lê 5 frases (linhas) de, no máximo, 100 
+   caracteres cada uma e armazene-as em um arquivo. Mas, antes de gravar 
+   cada frase no arquivo, é necessário converter todas as suas letras 
+   para maiúsculas. Os nome do arquivo será fornecido, via teclado, pelo 
+   usuário. A função que converte maiuscula para minúscula é toupper(). 
+   A seguir, feche o arquivo e reabra para leitura exibindo todas as 
+   frases convertidas em maiúsculas. 
+
+========================================================================
+
+3) Faça um programa em C que leia o nome de um arquivo em formato texto,
+   abra este arquivo e então conte o número de ocorrências de cada 
+   caracter alfanumerico (letras e números) presente no texto, de forma 
+   não sensível ao caso. Como saída, o programa deve imprimir um relatório 
+   em duas colunas conforme o exemplo abaixo (os números devem estar 
+   alinhados à direita em 5 casas decimais). A saída deve ser gravada 
+   em um arquivo texto chamado "ocorrencias.txt".
+   
+   Exemplo:
+   ========
+   
+Caractere | No de ocorrências 
+=============================
+0         |     1
+.         | .
+.         | .
+.         | .
+9         |    21
+A         |   321
+.         | .
+.         | .
+.         | .
+Z         |   321
+=============================
+
+========================================================================
+
+4) faça um programa em C que receba como entrada do usuário o nome de 
+   um arquivo texto e dois caracteres alfanuméricos, A e B. A seguir, o
+   programa deve abrir o arquivo texto e substituir todas as ocorrências
+   de A por B no arquivo.
+   
+========================================================================   
+
+5) Faça um programa em C que leia os nomes de dois arquivos pela linha 
+   de comando, designados como "arquOrigem"e "arqDestino", e então 
+   realize a cópia do conteúdo de "arqOrigem"para "arqDestino".
+   
+   Obs: 
+   
+   a) arqOrigem deve existir na pasta indicada. Caso este arquivo não 
+      exista, imprimir uma mensagem de aviso e parar a execução.
+   b) arqDestino deverá ser criado caso não exista, e se existir,
+      deve-se informar o usuário que o arquivo será sobrescrito e pedir
+      a sua confirmação.
+   
+   Exemplo:
+   ========
+   
+   $ ./copia ~/arquivo.bmp ~/Documentos/arquivo.bak
+   (cria uma cópia de arquivo.bmp em arquivo.bak)

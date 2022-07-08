@@ -53,7 +53,7 @@ int main()
    while (1)
    {      
       fread(&pessoa, sizeof(CONTATO), 1, dados);
-      if (!feof(dados))
+      if (!feof(dados)) // sempre testar o feof depois do fread!!!
       {
          printf("Dados gravados:\n");
          printf("Nome: ");

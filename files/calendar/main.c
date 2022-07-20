@@ -13,7 +13,45 @@ typedef struct
     char fone[TAM_FONE];
 } registro ;
 
+typedef struct
+{
+    char nome[TAM_NOME];
+    int position;
+} indexStruct;
+
+
 FILE *arquivo;
+FILE *indexFile;
+
+void beforeInitialization(){
+    /*if(!(indexFile = fopen("index.dat", "rb+"))){
+        printf("Cannot open index file");
+        printf("\nCreating new index file\n");
+        arquivo = fopen("index.dat", "wb+");
+        system("pause");
+    }*/
+
+    int sizer = sizeof(registro);
+
+
+    fseek(arquivo, 0, SEEK_END);
+    int n = ftell(arquivo) / sizer;
+
+    registro aux;
+
+
+    indexStruct *index = (indexStruct*)malloc(n * sizeof(indexStruct));
+
+    for(int i = 0; i < n; i++){
+        for(int j = n - 1; j >= i; j--){
+            fseek(arquivo, (j - 1) * sizer, SEEK_SET);
+            fread(&aux, sizer, 1, arquivo);
+            strcpy(index[i].nome, aux.nome);
+            index[i].position = i;            
+        }
+    }
+}
+
 void bubblesort(FILE *F)
 {
     int i, j, n;
@@ -55,6 +93,9 @@ int insereRegistro()
     fwrite(&a, sizeof(registro), 1, arquivo);
     printf("\n\t Registro inserido! Tecle [ENTER]\n");
     getchar();
+
+    
+
     return 0;
 
 }
@@ -176,13 +217,15 @@ int main()
         printf("\nErro! Não foi possível abrir o arquivo de dados!\n");
         printf("\nCriando novo arquivo de dados...\n");
         arquivo = fopen("dados.dat", "wb+");
-        system("pause");
+        //system("pause");
     }
 
+    beforeInitialization(arquivo);
 
+    /*
     while(opcao)
     {
-        system("clear");
+        //system("clear");
         printf("\tAgenda\n\n");
         printf("Menu principal\n\n");
         printf("\t[0] Sair\n");
@@ -202,7 +245,8 @@ int main()
     {
         printf("\nErro ao fechar o arquivo de dados!\n");
         return 1;
-    }
+    } 
+    */
     return 0;
 }
 

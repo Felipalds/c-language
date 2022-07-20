@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/luizfelipefonsecarosa/github/c-language'
+make: Leaving directory '/home/luizfelipefonsecarosa/github/c-language'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
